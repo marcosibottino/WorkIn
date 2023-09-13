@@ -25,3 +25,37 @@
 #container a {
   text-decoration: none;
 }
+
+// .item_logo {
+//     position: relative;
+//     width: 17%;
+//     padding: 5px;
+//     border-radius: 15px;
+//     margin-right: 5%;
+// }
+
+.header-content {
+  margin-top: 7%;
+}
+
+.list-apps {
+  background: none;
+  margin-top: 35px;
+
+  ion-item {
+    img {
+      position: relative;
+      width: 15%;
+      // padding: 5px;
+      border-radius: 15px;
+      margin-right: 5%;
+      margin: 15px;
+      box-shadow: 0px 1px 10px #fff;
+      border: none;
+    }
+
+    .trello {
+      box-shadow: 0px 1px 10px #4d71d7;
+    }
+  }
+}

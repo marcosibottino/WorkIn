@@ -1,3 +1,39 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-content>
+      <!-- <h1>Menu</h1> -->
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="../assets/avatar.jpeg" alt="">
+        <ion-label>
+          <h2>Dr. Hamad Fakih</h2>
+          <p>Dermathologist</p>
+        </ion-label>
+      </div>
+      <div class="action-button">
+        <ion-button>
+          <ion-icon slot="start" name="create"></ion-icon> Edit Information
+        </ion-button>
+      </div>
+
+      <ion-list class="menu-items" lines="none">
+        <ion-item [class.active]="activeItem === 1" (click)="setActiveItem(1)" [routerLink]="['home']" class="active">
+          <ion-icon name="home"></ion-icon> Home
+        </ion-item>
+        <ion-item [class.active]="activeItem === 2" (click)="setActiveItem(2)" [routerLink]="['tasks']">
+          <ion-icon name="pie-chart-outline"></ion-icon> Tasks
+        </ion-item>
+        <ion-item [class.active]="activeItem === 3" (click)="setActiveItem(3)" [routerLink]="['meetings']">
+          <ion-icon name="pie-chart-outline"></ion-icon> Meetings
+        </ion-item>
+        <ion-item [class.active]="activeItem === 4" (click)="setActiveItem(4)" [routerLink]="['list']">
+          <ion-icon name="pie-chart-outline"></ion-icon> List
+        </ion-item>
+        <ion-item [class.active]="activeItem === 5" (click)="setActiveItem(5)" [routerLink]="['chatgpt']">
+          <ion-icon name="pie-chart-outline"></ion-icon> Chat GPT
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
