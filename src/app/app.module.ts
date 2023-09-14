@@ -11,17 +11,14 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { MeetingsComponent } from './components/meetings/meetings.component';
 import { ListComponent } from './components/list/list.component';
 import { GptComponent } from './components/gpt/gpt.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HomePage,
-    TasksComponent,
-    MeetingsComponent,
-    ListComponent,
-    GptComponent
   ],
-  imports: [BrowserModule, 
+  imports: [BrowserModule,
+    ComponentsModule,
     IonicModule.forRoot(),
      AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

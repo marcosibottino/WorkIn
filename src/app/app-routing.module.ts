@@ -7,7 +7,7 @@ import { GptComponent } from './components/gpt/gpt.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {

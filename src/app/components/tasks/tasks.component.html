@@ -15,9 +15,15 @@
       <ion-title size="large">Tasks</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <input type="text" placeholder="Add Task" class="input-task" [(ngModel)]="newTodo" >
+    <button class="agregar" type="submit" (click)="saveTodo()">+</button>
   </div>
+
+  <ion-list class="list-task" *ngFor="let todo of todos; let i = index">
+    <ion-item [ngClass]="!todo.isCompleted ? 'done' : ''" (click)="done(i)">
+      {{todo.name}}
+      <ion-icon name="trash" slot="end" style="color: red;" (click)="remove(i)"></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>

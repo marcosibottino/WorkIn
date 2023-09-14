@@ -17,14 +17,14 @@
       </div>
 
       <ion-list class="menu-items" lines="none">
-        <ion-item [class.active]="activeItem === 1" (click)="setActiveItem(1)" [routerLink]="['home']" class="active">
+        <ion-item [class.active]="activeItem === 1" (click)="setActiveItem(1)" [routerLink]="['']" class="active">
           <ion-icon name="home"></ion-icon> Home
         </ion-item>
         <ion-item [class.active]="activeItem === 2" (click)="setActiveItem(2)" [routerLink]="['tasks']">
-          <ion-icon name="pie-chart-outline"></ion-icon> Tasks
+          <ion-icon name="list"></ion-icon> Tasks
         </ion-item>
         <ion-item [class.active]="activeItem === 3" (click)="setActiveItem(3)" [routerLink]="['meetings']">
-          <ion-icon name="pie-chart-outline"></ion-icon> Meetings
+          <ion-icon name="calendar"></ion-icon> Meetings
         </ion-item>
         <ion-item [class.active]="activeItem === 4" (click)="setActiveItem(4)" [routerLink]="['list']">
           <ion-icon name="pie-chart-outline"></ion-icon> List
