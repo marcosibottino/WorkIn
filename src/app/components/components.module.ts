@@ -6,6 +6,7 @@ import { ListComponent } from './list/list.component';
 import { MeetingsComponent } from './meetings/meetings.component';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { PopoverComponent } from '../core/modals/popover/popover.component';
 
 
 
@@ -14,7 +15,8 @@ import { IonicModule } from '@ionic/angular';
     TasksComponent,
     GptComponent,
     ListComponent,
-    MeetingsComponent
+    MeetingsComponent,
+    PopoverComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { IonicModule } from '@ionic/angular';
     TasksComponent,
     GptComponent,
     ListComponent,
-    MeetingsComponent
+    MeetingsComponent,
+    PopoverComponent
   ]
 })
 export class ComponentsModule { }

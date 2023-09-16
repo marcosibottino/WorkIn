@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Meetings
     </ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -16,8 +16,87 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header tappable>
+      <ion-card-title>New Event</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item color="light">
+        <ion-input type="text" placeholder="Title"></ion-input>
+      </ion-item>
+      <hr>
+      <ion-item color="light">
+        <ion-input type="text" placeholder="Description"></ion-input>
+      </ion-item>
+      
+      <hr>
+
+      <ion-item color="light">
+        <ion-label>Start</ion-label>
+        <ion-input value="{{'DD.MM.YYYY' }}" id="date" class="ion-text-end"></ion-input>
+        <ion-popover trigger="date" size="cover">
+          <ng-template>
+            <ion-datetime
+              presentation="date"
+              locale="sl-SI"
+            ></ion-datetime>
+          </ng-template>
+        </ion-popover> 
+      </ion-item>
+
+      <hr>
+      
+      <ion-item color="light">
+        <ion-label>End</ion-label>
+        <ion-input value="{{'DD.MM.YYYY' }}" id="date" class="ion-text-end"></ion-input>
+        <ion-popover trigger="date" size="cover">
+          <ng-template>
+            <ion-datetime
+              presentation="date"
+              locale="sl-SI"
+            ></ion-datetime>
+          </ng-template>
+        </ion-popover> 
+      </ion-item>
+      
+      <hr>
+      
+      <ion-item  color="light">
+        <ion-label>Reminder</ion-label>
+        <ion-fab-button  size="small" vertical="top" horizontal="end" (click)="presentPopover($event)">
+                <ion-icon name="alarm"> </ion-icon>
+            </ion-fab-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-datetime class="calendar"></ion-datetime>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Events Today</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item style="font-style: italic; font-weight: bolder;">
+          Event
+          <ion-icon name="information-circle" slot="end" color="primary"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Event
+          <ion-icon name="information-circle" slot="end" color="primary"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Event
+          <ion-icon name="information-circle" slot="end" color="primary"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Event
+          <ion-icon name="information-circle" slot="end" color="primary"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
