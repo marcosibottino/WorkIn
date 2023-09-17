@@ -25,3 +25,15 @@
   #container a {
     text-decoration: none;
   }
+
+
+  .selector {
+    position: absolute;
+    width: 25%;
+    right: 5%;
+    padding-left: 3%;
+    background: gray;
+    top: 10%;
+    border-radius: 25px;
+    background-color:  var(--ion-color-primary);
+  }

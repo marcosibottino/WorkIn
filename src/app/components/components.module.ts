@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TasksComponent } from './tasks/tasks.component';
 import { GptComponent } from './gpt/gpt.component';
-import { ListComponent } from './list/list.component';
+// import { NewsComponent } from './news/news.component';
+import { NewsComponent } from './news/news.component'
 import { MeetingsComponent } from './meetings/meetings.component';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { PopoverComponent } from '../core/modals/popover/popover.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -14,19 +16,20 @@ import { PopoverComponent } from '../core/modals/popover/popover.component';
   declarations: [
     TasksComponent,
     GptComponent,
-    ListComponent,
+    NewsComponent,
     MeetingsComponent,
     PopoverComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    HttpClientModule
   ],
   exports: [
     TasksComponent,
     GptComponent,
-    ListComponent,
+    NewsComponent,
     MeetingsComponent,
     PopoverComponent
   ]
